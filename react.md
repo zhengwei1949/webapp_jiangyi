@@ -4,11 +4,19 @@
 - node.js中的模块化思想
 - npm使用
 
+
+# 注意事项
+- 大小写一定要注意，包括文件名大小写
+
 # day01
 ## 01-移动App开发视频-混合app开发相关知识介绍-20:41
 - 原生app --> 适合复杂、对体验要求高的app(可以获得手机较高的权限，用于获取用户和手机的深度信息，比如用户连接过的wifi,Mac地址，手机装过的app,各种手机里的文件等...,其他的类型的app像webapp,混合app比如要整一个摄像头实时识别的功能，要在摄像头取景界面定制一些文字功能就没办法做，只能用原生的ios,android来做)
 - react Native(react native不能归为原生，原生一般指的是android,ios写的app如何理解 --> react native写好之后，可以翻译成ios,android的代码)
     + https://facebook.github.io/react-native/showcase.html
+
+### 如何确定是webview中嵌套的网页还是原生的控件写的?
+找到你手机的设置(只有android才可以测出来)--->开发者选项---->显示布局边界  选择开启后再去你要查看的app看整体布局边界就可以知道，如果是web app那么应该就是一个webview去加载网页，只有屏幕边才有红色线，如果是native app那么每个按钮，文字，图片都会红色的线显示这个控件的布局情况
+
 
 ![](http://7fvanf.com1.z0.glb.clouddn.com/17-8-21/29259951.jpg)
 
@@ -27,10 +35,24 @@
 - 拉钩网上搜索职位 --> 只有react + react native工作机会最多，其他的几乎没啥工作机会
 
 ## 02-移动App开发视频-webapp介绍和快速开始-14:16
-- 使用范围
+
+### webpack理解
+今的很多网页其实可以看做是功能丰富的应用，它们拥有着复杂的JavaScript代码和一大堆依赖包。为了简化开发的复杂度，前端社区涌现出了很多好的实践方法
+
+a:模块化，让我们可以把复杂的程序细化为小的文件;
+
+b:类似于TypeScript这种在JavaScript基础上拓展的开发语言：使我们能够实现目前版本的JavaScript不能直接使用的特性，并且之后还能能装换为JavaScript文件使浏览器可以识别；
+
+c:scss，less等CSS预处理器
+
+.........
+
+这些改进确实大大的提高了我们的开发效率，但是利用它们开发的文件往往需要进行额外的处理才能让浏览器识别,而手动处理又是非常反锁的，这就为WebPack类的工具的出现提供了需求。
+
+### 使用范围
     + vue + webpack
     + react + webpack
-## 使用
+### 使用
 1. 全局安装 `npm install -g webpack -g`
 2. 创建演示文件夹(demo_001)
 ```
@@ -131,9 +153,7 @@ https://segmentfault.com/a/1190000005921721
 8. 如果想放到网上供别人看，可以下载xde，安装好之后，注册登录(相关文档https://docs.expo.io/versions/latest/guides/building-standalone-apps.html)
 9. 在xde当中打开当前项目 --> publish到Expo.io上面进行查看
 
-## 打包
-http://www.jianshu.com/p/22aa14664cf9?open_source=weibo_search
-见pdf文件
+### 最简单的体验react native的方式 -->　https://snack.expo.io/
 
 # day02
 ## 01-移动App开发-react的四个核心内容介绍-17:33(这块等后面学完了再回头看，了解即可，没有写代码看了也会忘记)
@@ -561,3 +581,60 @@ npm install --save-dev babel-preset-stage-0 babel-preset-stage-1 babel-preset-st
 ## 04-移动App开发-ES5和ES6语法对比+单击事件的使用-13:38(demo_003)
 ### es5和es6语法对照(预习的时候对照着抄写三遍) 
 http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8
+
+```javascript
+//react中的事件支持和使用
+import React,{Component} from 'react';
+
+//直接在js中定义样式，内嵌样式
+let style = {
+    backgroundColor:'blue'
+}
+
+export default class ClickEvent extends Component{
+    //设置默认属性和默认状态
+    constructor(props){
+        super(props);
+        //初始化state
+        this.state = {
+            liked:false
+        };
+    }
+
+    //单击事件处理方法
+    handleClick(pm1,pm2,pm3,e){
+        console.log(pm1);
+        console.log(pm2);
+        console.log(pm3);
+        console.log(e);
+        this.setState({liked:!this.state.liked});
+    }
+
+    //用箭头函数去定义自己的方法
+    handleMouseOver=(str)=>{
+        console.log(str);
+    }
+
+    render(){
+        const text = this.state.liked?'like':'have\'t liked';
+        //return里面要渲染的html页面
+        return (
+            <p onMouseOver={()=>this.handleMouseOver('mouseover triggered')} onClick={this.handleClick.bind(this,23,'df')}>
+                You {text} this,Click to toggle.
+            </p> 
+        )
+    }
+}
+
+```
+
+## 05-移动App开发-获取dom元素+事件监听+属性校验-18:25(demo_004)
+- 通过ref定位元素+通过this.refs获取元素
+- 事件监听
+- 属性校验
+
+## 06-移动App开发-受控表单组件和组合组件-17:22(demo_005)
+
+
+## 06-移动App开发-context特性介绍-15:23(demo_006)
+

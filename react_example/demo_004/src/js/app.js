@@ -5,6 +5,9 @@ import ReactDOM from 'react-dom'
 import Hello from '../example//Hello.js'
 import Life from '../example/Life.js'
 import ClickEvent from '../example/ClickEvent.js'
+import FindDom from '../example/FindDom.jsx'
+import ListenEvent from '../example/ListenEvent.jsx'
+import PropsCheck from '../example/PropsCheck.js'
 
 const obj = {
     name:'小甲',
@@ -17,7 +20,7 @@ const obj = {
 ReactDOM.render(
     // 这是注释
     <div>
-       <ClickEvent />
+       <PropsCheck autoPlay={true} maxLoops={45} />
     </div>,
     document.getElementById('app')
 )
