@@ -3,6 +3,7 @@
 - es6语法
 - node.js中的模块化思想
 - npm使用
+- base64和图片的互相转换 http://imgbase64.duoshitong.com/
 
 
 # 注意事项
@@ -22,13 +23,16 @@
 
 ![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503334257281&di=c144af2f590e0125cc80db9ed6a88acb&imgtype=0&src=http%3A%2F%2Fwww.2cto.com%2Fuploadfile%2FCollfiles%2F20160405%2F2016040509214744.jpg)
 
-- webapp --> 只适合特别简单的app 类如：使用angular.js开发spa然后嵌入到ios的webview当中
+- webapp --> 只适合特别简单的app 类如：使用angular.js开发spa然后嵌入到ios的webview当中,体验不是很好，只适用于简单的app
     + http://app.ft.com/
     + http://m.sspapp.cn/
-- 混合app(体验不是很好，只适用于简单的app)
+- 混合app
     + ionic --> http://showcase.ionicframework.com/apps/top
     + apiCloud
     + AppCan
+Hybrid APP 指的是半原生半 Web 的混合类App。需要下载安装，看上去类似 Native App，但只有很少的 UI Web View，访问的内容是 Web 。
+![](https://segmentfault.com/img/bVp1XV)
+![](https://segmentfault.com/img/bVp1XY)
 
 ### 如何选择
 - 每年的热门技术不一样，选择标准 --> 相关职位数量
@@ -93,11 +97,14 @@ module.exports = {
 - 实现监视的效果 --> 安装webpack-dev-server `npm install webpack-dev-server --save-dev` + `npm install -g webpack-dev-server`
 - 修改package.json文件: `webpack-dev-server --config webpack.develop.config.js --devtool eval --progress --colors --hot --content-base src`
     + webpack-dev-server --> 让我们的代码以服务器的模式运行
-    + --colors 有颜色的输出
+    + --colors 有颜色的输出,当项目逐渐变大，webpack 的编译时间会变长，可以通过参数让编译的输出内容带有进度和颜色。
     + --progress 显示进度
     + --hot 热加载
     + --content-base --> 以src为根目录开启服务器 
     + webpack-dev-server构建的代码在内存当中
+    +　--devtool eval eval和source-map都是webpack中devtool的配置选项， eval模式是使用eval将webpack中每个模块包裹，然后在模块末尾添加模块来源//# souceURL， 依靠souceURL找到原始代码的位置。包含eval关键字的配置项并不单独产生.map文件（eval模式有点特殊， 它和其他模式不一样的地方是它依靠sourceURL来定位原始代码， 而其他所有选项都使用.map文件的方式来定位）。包含source-map关键字的配置项都会产生一个.map文件，该文件保存有原始代码与运行代码的映射关系， 浏览器可以通过它找到原始代码的位置。（注：包含inline关键字的配置项也会产生.map文件，但是这个map文件是经过base64编码作为DataURI嵌入），举个栗子：eval-source-map是eval和source-map的组合，可知使用eavl语句包括模块，也产生了.map文件。webpack将.map文件作为DataURI替换eval模式中末尾的//# souceURL。按照我自己的理解， eval和.map文件都是sourcemap实现的不同方式，虽然大部分sourcemap的实现是通过产生.map文件， 但并不表示只能通过.map文件实现。
+
+用webstorm的注意了，因为他是自动保存的，所以可能识别的比较慢，你需要手动的ctrl+s一下
 
 ## 04-移动App开发-babel-loader的使用-20:05(demo_003)
 -loaders(加载器) --> webpack像一个全能型的翻译专家，你不管在你的文件中写什么类型的代码(js,css,jsx,less,sass),都可以识别出来并最终转换成对应可以执行的代码
@@ -114,6 +121,8 @@ npm install react react-dom --save
 `npm install css-loader style-loader  --save-dev`
 `npm install sass-loader --save-dev`
 `npm install node-sass --save-dev`
+
+！用来定义loader的串联关系
 
 ### node-sass极有可能安装不了(尝试着翻墙安装或者使用cnpm)
 https://segmentfault.com/q/1010000004378378
@@ -165,6 +174,37 @@ https://segmentfault.com/a/1190000005921721
 
 理解：
 React.js的作用：帮助我们将界面分成了各个独立的小块，每一个块就是组件，这些组件之间可以组合、嵌套，就成了我们的页面。
+
+最简单的组件：
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+  <div id="container">
+      <!-- This element's contents will be replaced with your component. -->
+  </div>
+  <script src="https://a.alipayobjects.com/??es5-shim/4.0.5/es5-shim.js,es5-shim/4.0.5/es5-sham.js,html5shiv/3.7.2/src/html5shiv.js,react/0.13.3/react.js,react/0.13.3/JSXTransformer.js"></script>  
+  <script type="text/jsx">
+    var Hello = React.createClass({
+    render: function() {
+        return <div>Hello {this.props.name}</div>;
+    }
+});
+ 
+React.render(<Hello name="World" />, document.getElementById('container'));
+  </script>
+</body>
+</html>
+```
+
 
 ![](https://mc.qcloudimg.com/static/img/cd3730f5809ead4914f09cf6692ea3ca/image.jpg)
 
@@ -341,6 +381,7 @@ ReactDOM.render(
 ## react四个概念
 - virtual DOM 
     + js不直接和DOM打交道，而是和虚拟DOM打交道，这样，以后把DOM换成ios,android对应的界面UI也是可以的，实现写一份代码，可以开发出各个平台的代码
+    ![](http://7fvanf.com1.z0.glb.clouddn.com/17-8-23/84217367.jpg)
     + 采用了diff算法(这块后面会讲的)
 
     ![](http://7fvanf.com1.z0.glb.clouddn.com/17-8-21/81283142.jpg)
@@ -381,7 +422,7 @@ ReactDOM.render(
 
 
 - jsx --> 允许js和html混合 --> 遇到以<开头，就以html进行解析，遇到{，就是js进行解析
-- 单向数据流 --> vue中的问题:多个组件共同依赖某个数据，一旦这个数据在某个组件中改变了，不太方便对其他组件进行同步，比较麻烦,数据管理不够清晰
+- 单向数据流 --> vue中的问题:多个组件共同依赖某个数据，一旦这个数据在某个组件中改变了，不太方便对其他组件进行同步，比较麻烦,数据管理不够清晰(这块了解即可，后面写代码会知道的)
 
 
 ## 02-移动App开发-react中jsx语法详细介绍-15:55
@@ -423,6 +464,63 @@ required reversed role rowSpan rows sandbox scope scoped scrolling seamless
 selected shape size sizes span spellCheck src srcDoc srcLang srcSet start step
 style summary tabIndex target title type useMap value width wmode wrap
 ```
+
+JSX是React的核心组成部分，它使用XML标记的方式去直接声明界面，界面组件之间可以互相嵌套。但是JSX给人的第一印象却是相当“丑陋”。当下面这样的例子被第一次展示的时候，甚至很多人称之为“巨大的退步”：
+
+```javascript
+var React = require('React');
+var message =
+  <div class="hello" onClick={someFunc}>
+    <span>Hello World</span>
+  </div>;
+React.renderComponent(message, document.body);
+```
+
+将HTML直接嵌入到JavaScript代码中看上去确实是一件足够疯狂的事情。人们花了多年时间总结出的界面和业务逻辑相互分离的“最佳实践”就这么被彻底打破。那么React为何要如此另类？
+
+模板出现的初衷是让非开发人员也能对界面做一定的修改。但这个初衷在当前Web程序里已完全不适用，每个模板背后的代码逻辑严重依赖模板中的内容和DOM结构，两者是紧密耦合的。即使做到文件位置的分离，实际上两者还是一体的，并且为了两者之间的协作而不得不引入很多机制和概念。以Angularjs的首页示例代码为例：
+
+
+```html
+<ul class="unstyled">
+  <li ng-repeat="todo in todoList.todos">
+    <input type="checkbox" ng-model="todo.done">
+    <span class="done-{{todo.done}}">{{todo.text}}</span>
+  </li>
+</ul>
+```
+
+尽管我们很容易看懂这一小段模板的含义，但你却无法开始写这样的代码，因为你需要学习这一整套语法。比如说，你得知道有ng-repeat这样的标记的准确含义，其中的”todo in todoList.todos”看上去是repeat语法的一部分，或许还有其它语法存在；可以看到有{{todo.text}}这样的数据绑定，那么如果要对这段文本格式化（加一个formatter）该怎么做；另外，ng-model背后又需要什么样的数据结构？
+
+现在来看React怎么写这段逻辑：
+
+```javascript
+render: function () {
+  var lis = this.todoList.todos.map(function (todo) {
+    return  (
+      <li>
+        <input type="checkbox" checked={todo.done}>
+        <span className="done-{todo.done}">{todo.text}</span>
+      </li>);
+  });
+  return (
+    <ul class="unstyled">
+      {lis}
+    </ul>
+  );
+}
+```
+可以看到，JSX中除了另类的HTML标记之外，并没有引入其它任何新的概念（事实上HTML标记也可以完全用JavaScript去写）。Angular中的repeat在这里被一个简单的数组方法map所替代。在这里你可以利用熟悉的JavaScript语法去定义界面，在你的思维过程中其实已经不需要存在模板的概念，需要考虑的仅仅是如何用代码构建整个界面。这种自然而直观的方式直接降低了React的学习门槛并且让代码更容易理解。
+
+
+
+```jsx
+//变量可以通过{变量}来嵌入
+var x = 'http://www.alipay.com';
+var y = <a href= {x} target="_blank">alipay.com</a>;
+React.render(y, document.getElementById('container'));
+```
+
 
 #### 属性扩展
 ```jsx
@@ -638,3 +736,4 @@ export default class ClickEvent extends Component{
 
 ## 06-移动App开发-context特性介绍-15:23(demo_006)
 
+虫洞 https://segmentfault.com/a/1190000004636213
