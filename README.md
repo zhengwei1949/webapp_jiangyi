@@ -7,3 +7,5 @@ React 组件的数据可以通过 componentDidMount 方法中的 Ajax 来获取�
 http://www.oschina.net/translate/how-i-learned-to-stop-worrying-and-love-react
 这里有一个小技巧，只要涉及到视图的变化，就应该考虑到state的变化，当某个方法改变了这个状态值时，整个组件就会重绘，从而达到刷新
 淘宝出品的不错的组件库：https://ant.design/components/date-picker-cn/
+关于路由的讲解：http://www.ruanyifeng.com/blog/2016/05/react_router.html
+官方的路由教程：https://github.com/reactjs/react-router-tutorial/tree/master/lessons
