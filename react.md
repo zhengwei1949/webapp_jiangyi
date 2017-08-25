@@ -6,6 +6,8 @@
 - base64和图片的互相转换 http://imgbase64.duoshitong.com/
 
 
+学习flex的在线教程：http://www.webhek.com/post/flexbox-playground.html
+
 # 注意事项
 - 大小写一定要注意，包括文件名大小写
 
