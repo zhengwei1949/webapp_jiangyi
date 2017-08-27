@@ -53,3 +53,6 @@ React.js 是 React 的核心库，在应用中必须先加载核心库。
 ReactDOM.js
 
 ReactDOM.js 是 React 的 DOM 渲染器，React 将核心库和渲染器分离开了，为了在 web 页面中显示开发的组件，需要调用 ReactDOM.render 方法， 第一个参数是 React 组件，第二个参数为 HTMLElement。
+
+
+![](https://pic4.zhimg.com/cbdba5d7d12c05e379cbac608f16e6d3_b.png)
