@@ -18,3 +18,10 @@ var isProduction = function () {
 ```
 
 npm root --global可以查看npm全局安装的目录的路径
+
+
+官方对jsx语法的解释：
+```
+We strongly believe that components are the right way to separate concerns rather than “templates” and “display logic.” We think that markup and the code that generates it are intimately tied together. Additionally, display logic is often very complex and using template languages to express it becomes cumbersome.
+
+```
