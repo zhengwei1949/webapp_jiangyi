@@ -27,3 +27,6 @@ We strongly believe that components are the right way to separate concerns rathe
 ```
 
 React 团队坚信一个组件的正确用途是 “separate concerns”，而不是前端模板或者展示逻辑。我们认为前端模板和组件代码是紧密相连的。另外，模板语言经常让展示的逻辑变得更复杂。
+
+虚拟dom不同于真正的dom，它是一个JavaScript对象。当状态发生变化的时候虚拟dom会进行一个diff判断/运算；然后判断哪些dom是需要被替换的而不是全部重绘，所以性能会比dom操作高很多。
+
