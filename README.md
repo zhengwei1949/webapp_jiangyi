@@ -65,3 +65,8 @@ ReactDOM.js 是 React 的 DOM 渲染器，React 将核心库和渲染器分离�
 https://zhuanlan.zhihu.com/p/21246418
 
 讲解受控组件 非受控组件 https://zhuanlan.zhihu.com/p/21246468
+
+
+![](https://pic2.zhimg.com/51d186cddc18d929e5329c1d6cd206a1_b.png)
+
+https://github.com/leanklass/leanreact/tree/component
