@@ -40,3 +40,6 @@ react-router V4 被一分为三: react-router-dom(for web)、react-router-native
 const foo = ({ hello: { world: bar } }) => ({ bar }) 这是什么意思？？
 
 ![](https://pic3.zhimg.com/dfee38183aed0b1058da9d6317a4e976_b.png)
+
+
+propTypes, defaultProps不要懒的去写，别人通过你的propTypes很容易理解组件，也容易debug
