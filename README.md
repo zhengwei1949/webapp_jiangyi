@@ -57,4 +57,9 @@ ReactDOM.js 是 React 的 DOM 渲染器，React 将核心库和渲染器分离�
 
 ![](https://pic4.zhimg.com/cbdba5d7d12c05e379cbac608f16e6d3_b.png)
 
-!()[https://pic4.zhimg.com/808767a118831a948be8e36329fad30b_b.png]
+![](https://pic4.zhimg.com/808767a118831a948be8e36329fad30b_b.png)
+
+![](https://pic3.zhimg.com/a91da7a9714bf46c8ff46f53881db696_r.png)
+
+
+https://zhuanlan.zhihu.com/p/21246418
