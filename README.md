@@ -72,3 +72,5 @@ https://zhuanlan.zhihu.com/p/21246418
 https://github.com/leanklass/leanreact/tree/component
 
 https://zhuanlan.zhihu.com/p/21246327
+
+![](https://unbug.gitbooks.io/react-native-training/content/QQ20160627-0.png)
