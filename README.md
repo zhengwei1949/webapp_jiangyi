@@ -30,3 +30,4 @@ React 团队坚信一个组件的正确用途是 “separate concerns”，而�
 
 虚拟dom不同于真正的dom，它是一个JavaScript对象。当状态发生变化的时候虚拟dom会进行一个diff判断/运算；然后判断哪些dom是需要被替换的而不是全部重绘，所以性能会比dom操作高很多。
 
+![](http://images2015.cnblogs.com/blog/605230/201706/605230-20170603132438274-1646294214.png)
