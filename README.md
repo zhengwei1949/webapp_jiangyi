@@ -16,3 +16,5 @@ var isProduction = function () {
   return process.env.NODE_ENV === 'production';
 };
 ```
+
+npm root --global可以查看npm全局安装的目录的路径
