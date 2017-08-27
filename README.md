@@ -35,3 +35,6 @@ React 团队坚信一个组件的正确用途是 “separate concerns”，而�
 
 
 react-router V4 被一分为三: react-router-dom(for web)、react-router-native(for native)、react-router(core)。但如果仅在浏览器中使用的话，一般只需要用到react-router-dom就可以了。
+
+
+const foo = ({ hello: { world: bar } }) => ({ bar }) 这是什么意思？？
