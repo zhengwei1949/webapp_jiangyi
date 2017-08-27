@@ -45,3 +45,11 @@ const foo = ({ hello: { world: bar } }) => ({ bar }) 这是什么意思？？
 propTypes, defaultProps不要懒的去写，别人通过你的propTypes很容易理解组件，也容易debug
 
 关于用state还是props原则上是顶层组件才有state而子组件都是接收props，有些少数的情况比如一个UI的零时数据，只对自己内部有影响而对子组件，父组件没有任何影响的，同时又可能需要渲染那么可以放到state里，尽量用props实现单向数据流，props传递层数太多可以用context替换
+
+React.js
+
+React.js 是 React 的核心库，在应用中必须先加载核心库。
+
+ReactDOM.js
+
+ReactDOM.js 是 React 的 DOM 渲染器，React 将核心库和渲染器分离开了，为了在 web 页面中显示开发的组件，需要调用 ReactDOM.render 方法， 第一个参数是 React 组件，第二个参数为 HTMLElement。
