@@ -43,3 +43,5 @@ const foo = ({ hello: { world: bar } }) => ({ bar }) 这是什么意思？？
 
 
 propTypes, defaultProps不要懒的去写，别人通过你的propTypes很容易理解组件，也容易debug
+
+关于用state还是props原则上是顶层组件才有state而子组件都是接收props，有些少数的情况比如一个UI的零时数据，只对自己内部有影响而对子组件，父组件没有任何影响的，同时又可能需要渲染那么可以放到state里，尽量用props实现单向数据流，props传递层数太多可以用context替换
