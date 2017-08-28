@@ -86,6 +86,9 @@ https://zhuanlan.zhihu.com/p/21246327
 ## flex布局
 http://the-echoplex.net/flexyboxes/
 
+## 如何学习jsx
+http://magic.reactjs.net/htmltojsx.htm
+
 
 ## 思考的框架
 - state is mutable,props is unmutable
