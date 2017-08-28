@@ -115,3 +115,7 @@ https://github.com/kdchang/reactjs101/tree/master/Appendix01
 ## 注意
 只有在constructor当中才可以写this.state = ,其他地方只能用this.setState
 如果用了constructor,一定要用super
+
+
+人人学习react视频
+链接: https://pan.baidu.com/s/1pKCScMR 密码: ft3g
