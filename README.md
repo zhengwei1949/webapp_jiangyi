@@ -85,3 +85,10 @@ https://zhuanlan.zhihu.com/p/21246327
 
 ## flex布局
 http://the-echoplex.net/flexyboxes/
+
+
+## 思考的框架
+- state is mutable,props is unmutable
+- event up,data down
+- props can be state ,and state can be props
+- if too depth ,use context 
