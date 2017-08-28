@@ -101,3 +101,10 @@ https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&circleciR
 ## react native的playground
 https://snack.expo.io/
 https://repl.it/languages/react_native
+
+## webpack学习诀窍
+- entry
+- loaders
+- plugins
+- output
+- devServer
