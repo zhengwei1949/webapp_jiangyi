@@ -108,3 +108,6 @@ https://repl.it/languages/react_native
 - plugins
 - output
 - devServer
+
+## 学会es6语法
+https://github.com/kdchang/reactjs101/tree/master/Appendix01
