@@ -88,6 +88,7 @@ http://the-echoplex.net/flexyboxes/
 
 ## 如何学习jsx
 http://magic.reactjs.net/htmltojsx.htm
+https://www.npmjs.com/package/htmltojsx
 
 
 ## 思考的框架
