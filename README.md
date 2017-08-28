@@ -111,3 +111,6 @@ https://repl.it/languages/react_native
 
 ## 学会es6语法
 https://github.com/kdchang/reactjs101/tree/master/Appendix01
+
+## 注意
+只有在constructor当中才可以写this.state = ,其他地方只能用this.setState
