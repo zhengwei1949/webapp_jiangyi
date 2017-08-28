@@ -89,6 +89,7 @@ http://the-echoplex.net/flexyboxes/
 ## 如何学习jsx
 http://magic.reactjs.net/htmltojsx.htm
 https://www.npmjs.com/package/htmltojsx
+https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&circleciRepo=&code_lz=G4QwTgBAMglg1gUwEIFcAuaD2A7CBeCAJQRAGM0A6UsEtBAYQBsQBnFgCgG8AoCP_gXwDmCNAElsMNDBCMAymhB0AXADMU2cjBzsAlD0GHBNNCjC5OjeAgAma2SwQBfXkYFOANK7d8AFiGwbRgYrUjg1DS0dBGAEbDR9bx8BNF8YFgpHNAUlBC4rRDsAQlT0zMU6CgLbJ10AbiS3T0ajGkCEMAjNaR1E5MNQSDoADzR8CFKMlgqEKusbAH4Acmql5SWNVYb-41EzXHYWnb4AHgAHCBwmGDC8TkmKf0Dg67CnAD4ATUwUCHuEUZOCZpDKkUJwCaYSFCITBE4AejO7yOPl0KPcKNq3G4QA&debug=false&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&showSidebar=true&targets=&version=6.26.0
 
 
 ## 思考的框架
