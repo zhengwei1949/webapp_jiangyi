@@ -74,3 +74,11 @@ https://github.com/leanklass/leanreact/tree/component
 https://zhuanlan.zhihu.com/p/21246327
 
 ![](https://unbug.gitbooks.io/react-native-training/content/QQ20160627-0.png)
+
+
+## props vs state
+- Use props to pass data and settings through the component tree.
+- Never modify this.props inside of a component; consider props immutable.
+- Use props to for event handlers to communicate with child components.
+- Use state for storing simple view state like wether or not drop-down options are visible.
+- Never modify this.state directly, use this.setstate instead.
