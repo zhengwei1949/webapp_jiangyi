@@ -97,3 +97,7 @@ https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&circleciR
 - event up,data down
 - props can be state ,and state can be props
 - if too depth ,use context 
+
+## react native的playground
+https://snack.expo.io/
+https://repl.it/languages/react_native
