@@ -82,3 +82,6 @@ https://zhuanlan.zhihu.com/p/21246327
 - Use props to for event handlers to communicate with child components.
 - Use state for storing simple view state like wether or not drop-down options are visible.
 - Never modify this.state directly, use this.setstate instead.
+
+## flex布局
+http://the-echoplex.net/flexyboxes/
