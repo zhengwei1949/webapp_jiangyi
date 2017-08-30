@@ -130,3 +130,5 @@ Windows paths
 webpack expects absolute paths for many config options. __dirname + "/app/folder" is wrong, because windows uses \ as path separator. This breaks some stuff.
 
 Use the correct separators. I.e. path.resolve(__dirname, "app/folder") or path.join(__dirname, "app", "folder").
+
+![](http://jellybellydev.github.io/webpack-presentation/img/do-you-want-to-know-more.gif)
