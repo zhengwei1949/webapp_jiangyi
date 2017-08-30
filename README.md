@@ -119,3 +119,6 @@ https://github.com/kdchang/reactjs101/tree/master/Appendix01
 
 人人学习react视频
 链接: https://pan.baidu.com/s/1pKCScMR 密码: ft3g
+
+## plugin汇总
+http://webpack.github.io/docs/list-of-plugins.html#hotmodulereplacementplugin
