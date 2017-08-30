@@ -143,3 +143,37 @@ Use the correct separators. I.e. path.resolve(__dirname, "app/folder") or path.j
 defaultValue 属性而不是 value,htmlFor而不是for,className而不是class
 
 context举例 https://doc.react-china.org/react/docs/context.html
+![](https://segmentfault.com/img/remote/1460000006831823?w=278&h=300)
+
+
+## 预习资料
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="reactContainer"></div>
+    <script src="./common/react.js"></script>
+    <script src="./common/react-dom.js"></script>
+    <script>
+        var HelloComponent =React.createClass({
+            render:function(){
+                return React.createElement('h1',null,'Hello world');
+            }
+        });
+ 
+        ReactDOM.render(
+            React.createElement(HelloComponent,null),
+            document.getElementById('reactContainer')
+        )
+    </script>
+</body>
+</html>
+```
+---> 太啰嗦了 ---> jsx --> 虽然看起来比较不习惯，但是代码更好看懂了 
+jsx--> 单向数据流 --> 
