@@ -124,3 +124,9 @@ https://github.com/kdchang/reactjs101/tree/master/Appendix01
 http://webpack.github.io/docs/list-of-plugins.html#hotmodulereplacementplugin
 
 The publicPath specifies the public URL address of the output files when referenced in a browser. For loaders that embed <script> or <link> tags or reference assets like images, publicPath is used as the href or url() to the file when it’s different than their location on disk (as specified by path)
+
+
+Windows paths
+webpack expects absolute paths for many config options. __dirname + "/app/folder" is wrong, because windows uses \ as path separator. This breaks some stuff.
+
+Use the correct separators. I.e. path.resolve(__dirname, "app/folder") or path.join(__dirname, "app", "folder").
