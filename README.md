@@ -122,3 +122,5 @@ https://github.com/kdchang/reactjs101/tree/master/Appendix01
 
 ## plugin汇总
 http://webpack.github.io/docs/list-of-plugins.html#hotmodulereplacementplugin
+
+The publicPath specifies the public URL address of the output files when referenced in a browser. For loaders that embed <script> or <link> tags or reference assets like images, publicPath is used as the href or url() to the file when it’s different than their location on disk (as specified by path)
