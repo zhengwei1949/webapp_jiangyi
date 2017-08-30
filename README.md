@@ -132,3 +132,6 @@ webpack expects absolute paths for many config options. __dirname + "/app/folder
 Use the correct separators. I.e. path.resolve(__dirname, "app/folder") or path.join(__dirname, "app", "folder").
 
 ![](http://jellybellydev.github.io/webpack-presentation/img/do-you-want-to-know-more.gif)
+
+
+对devtool的理解：eval-source-map 适合开发，source-map 适合线上环境
