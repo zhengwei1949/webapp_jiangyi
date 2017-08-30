@@ -139,3 +139,5 @@ Use the correct separators. I.e. path.resolve(__dirname, "app/folder") or path.j
 
 
 对devtool的理解：eval-source-map 适合开发，source-map 适合线上环境
+
+defaultValue 属性而不是 value,htmlFor而不是for,className而不是class
