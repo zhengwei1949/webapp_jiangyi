@@ -180,3 +180,56 @@ jsx--> 单向数据流 -->
 
 如何理解单向数据流 
 　　在React中，数据的流向是单向的——从父节点传递到子节点，因为组件是简单而且易于把握的，他们只需从父节点获取props渲染即可，如果顶层组件的某个prop改变饿了，React会递归的向下便利整棵组件树，重新渲染所有使用这个属性
+  
+  
+ ## 理解生命周期小案例
+ ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生命周期案例</title>
+    <script src="./common/react.js"></script>
+    <script src="./common/react-dom.js"></script>
+    <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+</head>
+<body>
+    <div id="demo"></div>
+    <script type="text/babel">
+      var Hello = React.createClass({
+          getInitialState:function(){
+              return {
+                  opacity:1.0
+              }
+          },
+          componentDidMount: function () {
+            setInterval(function () {
+                var opacity = this.state.opacity;
+                opacity -= .05;
+                if (opacity < 0.1) {
+                    opacity = 1.0;
+                }
+                this.setState({
+                    opacity: opacity
+                });
+                }.bind(this), 100);
+          },
+
+          render:function(){
+              return (
+                  <div style={{opacity:this.state.opacity}}>
+                       <h2>Hello {this.props.name}</h2> 
+                  </div>
+              )
+          }
+      });
+      ReactDOM.render(
+          <Hello name="world"/>,
+          document.getElementById('demo')
+      )
+    </script>
+</body>
+</html>
+```
