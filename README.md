@@ -248,3 +248,5 @@ const title = <h1>React Learning</h1>
 - CSS模块：由于全局CSS命名空间的存在，使得改变CSS后是否有副作用不得而知。CSS模块默认情况下将CSS设成本地，并显示你在Javascript中可以引用的唯一类名。
 
 想象我们的界面是一段动画，React可以让我们把动画切分成一帧一帧的片段，我们只需要关注其中某个片段，以及片段有哪些变化，至于怎么变化，过程如何，React可以自动帮我们处理
+
+![](http://p0.qhimg.com/t01f27a564f7933eda2.png)
