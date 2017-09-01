@@ -242,3 +242,8 @@ const title = <h1>React Learning</h1>
 ![](https://yubolun.com/wp-content/uploads/2017/08/React-Lifecycle.png)
 
 ![](https://pic3.zhimg.com/v2-97606d1cd5f055887a9735f414dbe002_b.jpg)
+
+## 为什么要把css用模块化的方式引入
+- 去除写死的代码：当一个JS组件不再被代码引入到项目中，对应的CSS也不会被引入进来。而最终打包后的结果也只会包含那些被引用的部分。
+- CSS模块：由于全局CSS命名空间的存在，使得改变CSS后是否有副作用不得而知。CSS模块默认情况下将CSS设成本地，并显示你在Javascript中可以引用的唯一类名。
+
