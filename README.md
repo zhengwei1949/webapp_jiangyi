@@ -235,3 +235,6 @@ jsx--> 单向数据流 -->
 ```
 
 
+```ljsx
+const title = <h1>React Learning</h1>
+```
