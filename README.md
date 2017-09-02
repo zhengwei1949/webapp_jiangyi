@@ -250,3 +250,5 @@ const title = <h1>React Learning</h1>
 想象我们的界面是一段动画，React可以让我们把动画切分成一帧一帧的片段，我们只需要关注其中某个片段，以及片段有哪些变化，至于怎么变化，过程如何，React可以自动帮我们处理
 
 ![](http://p0.qhimg.com/t01f27a564f7933eda2.png)
+
+对cors的理解：http://www.ruanyifeng.com/blog/2016/04/cors.html
