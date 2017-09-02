@@ -261,4 +261,4 @@ componentWillUnmount
 componentWillReceiveProps
 传入新的props是调用
 
-
+![](https://segmentfault.com/img/bVUaxs?w=380&h=670)
