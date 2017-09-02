@@ -288,5 +288,5 @@ $ webpack-dev-server  --inline --hot
 不停寻找一个好的系统好让你可以在 JavaScript 代码里使用 Node 或 Bower 的模块，或者依赖一系列疯狂的后端配置来正确地使用那些模块
 需要优化资源分发机制却又担心会破坏掉某些东西
 
-
+http://www.jianshu.com/p/5a76bda88d13
 
