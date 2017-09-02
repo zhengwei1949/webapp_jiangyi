@@ -252,3 +252,13 @@ const title = <h1>React Learning</h1>
 ![](http://p0.qhimg.com/t01f27a564f7933eda2.png)
 
 对cors的理解：http://www.ruanyifeng.com/blog/2016/04/cors.html
+
+
+componentDidMount
+常用来在组件加载完毕后 网络请求数据是使用
+componentWillUnmount
+组件死的时候调用，一般用来清除监听之类的
+componentWillReceiveProps
+传入新的props是调用
+
+
