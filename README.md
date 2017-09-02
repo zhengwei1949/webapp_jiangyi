@@ -289,4 +289,4 @@ $ webpack-dev-server  --inline --hot
 需要优化资源分发机制却又担心会破坏掉某些东西
 
 http://www.jianshu.com/p/5a76bda88d13
-
+http://www.jianshu.com/p/2f632cbdf6ad
