@@ -262,3 +262,11 @@ componentWillReceiveProps
 传入新的props是调用
 
 ![](https://segmentfault.com/img/bVUaxs?w=380&h=670)
+
+# 对于 webpack 3
+npm install --save-dev extract-text-webpack-plugin
+# 对于 webpack 2
+npm install --save-dev extract-text-webpack-plugin@2.1.2
+# 对于 webpack 1
+npm install --save-dev extract-text-webpack-plugin@1.0.1
+
