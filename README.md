@@ -291,3 +291,5 @@ $ webpack-dev-server  --inline --hot
 http://www.jianshu.com/p/5a76bda88d13
 http://www.jianshu.com/p/2f632cbdf6ad
 http://www.jianshu.com/p/dcb28b582318
+
+一般来说，使用flexDirection、alignItems和 justifyContent三个样式属性就已经能满足大多数布局需求
