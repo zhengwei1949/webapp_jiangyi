@@ -293,3 +293,6 @@ http://www.jianshu.com/p/2f632cbdf6ad
 http://www.jianshu.com/p/dcb28b582318
 
 一般来说，使用flexDirection、alignItems和 justifyContent三个样式属性就已经能满足大多数布局需求
+
+只要记住一句话就可以了：UI 组件负责 UI 的呈现，容器组件负责管理数据和逻辑。
+你可能会问，如果一个组件既有 UI 又有业务逻辑，那怎么办？回答是，将它拆分成下面的结构：外面是一个容器组件，里面包了一个UI 组件。前者负责与外部的通信，将数据传给后者，由后者渲染出视图。
