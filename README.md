@@ -299,3 +299,5 @@ http://www.jianshu.com/p/dcb28b582318
 
 
 观察virtual dom的性能：http://requirebin.com/?gist=5492847b9a9025e64bab
+
+把css转换成jsx语法 https://staxmanade.com/CssToReact/
